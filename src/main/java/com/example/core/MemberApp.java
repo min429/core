@@ -14,10 +14,10 @@ public class MemberApp {
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
         // 스프링 컨테이너 // @Configuration이 붙은 AppConfig를 설정 정보로 사용 // AppConfig의 @Bean들 관리
 
-        applicationContext.getBean("memberService", MemberService.class); // Bean가져옴 // "메서드 이름", 타입
+        MemberService memberService = applicationContext.getBean("memberService", MemberService.class);// Bean가져옴 // "메서드 이름", 타입
 
-        AppConfig appConfig = new AppConfig();
-        MemberService memberService = appConfig.memberService();
+//        AppConfig appConfig = new AppConfig();
+//        MemberService memberService = appConfig.memberService();
         Member member = new Member(1L, "memberA", Grade.VIP);
         memberService.join(member);
 
