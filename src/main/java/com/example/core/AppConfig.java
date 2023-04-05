@@ -30,6 +30,8 @@ public class AppConfig { // 어플리케이션 전체를 설정(기획)
     // call AppConfig.memberService
     // call AppConfig.orderService
 
+    // Bean 객체: 반환 객체, 이름: 메서드 이름
+
     @Bean
     public MemberRepository memberRepository() {
         System.out.println("call AppConfig.memberRepository");
